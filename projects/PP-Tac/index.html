@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PP-Tac: Paper Picking Using Omnidirectional Tactile Feedback in Dexterous Robotic Hands</title>
+		<meta charset="utf-8" />
+		 <meta name="viewport" content="width=1000">
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-LS6L6LB7RX"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-LS6L6LB7RX');
+		</script>
+
+		<meta property="og:url"           content="https://peilin-666.github.io/projects/PP-Tac" />
+	    <meta property="og:type"          content="website" />
+	    <meta property="og:title"         content="PP-Tac: Paper Picking Using Omnidirectional Tactile Feedback in Dexterous Robotic Hands" />
+	    <meta property="og:description"   content="Robots are increasingly envisioned as human companions, assisting with everyday tasks that often involve manipulating deformable objects. Recent advancements in robotic hardware and embodied AI algorithms have expanded the range of tasks robots can perform. However, current systems still struggle with handling thin, flat objects like paper and fabric due to limitations in motion planning and perception. This paper introduces PP-Tac, a robotic system designed specifically for handling paper-like objects. We developed a multi-fingered robotic hand equipped with high-resolution tactile sensors that provide omnidirectional feedback, enabling slippage detection and precise friction control with the material. Additionally, we created a grasp trajectory synthesis pipeline to generate a dataset of flat-object grasping motions and trained a diffusion policy for real-time control. This policy was then transferred to a real-world hand-arm platform for extensive evaluation. Our experiments, involving both everyday objects (e.g., plastic bags, paper, cloth) and more challenging materials (e.g., kraft paper handbags), achieved a success rate of 87.5%. By leveraging tactile feedback, our system also adapts to varying surfaces beneath the objects. These results demonstrate the robustness of our approach. We believe PP-Tac has significant potential for applications in household and industrial settings, such as organizing documents, packaging, and cleaning, where precise handling of flat objects is essential." />
+	    
+
+	</head>
+	<body id="top">
+
+
+		<!-- Main -->
+			<div id="main" style="padding-bottom:1em; padding-top: 5em; width: 60em; max-width: 70em; margin-left: auto; margin-right: auto;">
+					<section id="four">
+						<div class="box alt" style="margin-bottom: 1em;">
+							<div class="row 0% uniform" style="width: 100%; display: flex; justify-content: space-between;">
+								<!-- tong Logo -->
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 20%">
+									<span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="images/tong.png" alt="">
+									</span>
+								</div>
+								<!-- shanghaitech Logo -->
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 22%">
+									<span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="images/shanghaitech.svg" alt="">
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<h1 style="text-align: center; margin-bottom: 0; color: #8C1515; font-size: 300%">PP-Tac: Paper Picking Using </h1>
+						<h2 style="text-align: center; white-space: nowrap; font-size: 200%">Omnidirectional Tactile Feedback in Dexterous Robotic Hands</h2>
+
+						<div class="video-container" style="max-width: 800px; margin: 0 auto;">
+							<video autoplay loop muted playsinline style="width: 100%; display: block;">
+								<source src="videos/Results_Gallery.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							<p style="text-align: center; margin-top: 0.5em;">Picking various paper-like objects from various terrains.</p>
+							</p>
+						</div>
+
+
+						<p style="color: black;">Robots are increasingly envisioned as human companions, assisting with everyday tasks that often involve manipulating deformable objects. Recent advancements in robotic hardware and embodied AI algorithms have expanded the range of tasks robots can perform. However, current systems still struggle with handling thin, flat objects like paper and fabric due to limitations in motion planning and perception. This paper introduces PP-Tac, a robotic system designed specifically for handling paper-like objects. We developed a multi-fingered robotic hand equipped with high-resolution tactile sensors that provide omnidirectional feedback, enabling slippage detection and precise friction control with the material. Additionally, we created a grasp trajectory synthesis pipeline to generate a dataset of flat-object grasping motions and trained a diffusion policy for real-time control. This policy was then transferred to a real-world hand-arm platform for extensive evaluation. Our experiments, involving both everyday objects (e.g., plastic bags, paper, cloth) and more challenging materials (e.g., kraft paper handbags), achieved a success rate of 87.5%. By leveraging tactile feedback, our system also adapts to varying surfaces beneath the objects. These results demonstrate the robustness of our approach. We believe PP-Tac has significant potential for applications in household and industrial settings, such as organizing documents, packaging, and cleaning, where precise handling of flat objects is essential.
+						</p>
+		
+						<hr>
+						<h3>Paper</h3>
+						<p style="margin-bottom: 0em;">
+							<!-- Latest version: <a href="https://arxiv.org/abs/">arXiv</a> or <a href="PP_Tac.pdf">here</a>. -->
+							Paper is coming soon!!!
+						</p>
+						<div class="12u$"><a href="PP_Tac.pdf"><span class="image fit" style="border: 1px solid; border-color: #888888;"><img src="images/PP_tac_thumbnail.png" alt="" /></span></a></div>
+
+						
+						<h3>Code and Tutorial</h3>
+
+						<div class="box alt" style="margin-bottom: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 10%">
+									<a href="">
+										<span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/github_logo.svg" alt=""/>
+										</span>
+										Code Coming Soon!
+									</a>
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 10%">
+									<a href="">
+										<span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/build.svg" alt=""/>
+										</span>
+										Hardware Guide Coming Soon!
+									</a>
+								</div>
+
+								<!-- <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 30%;">
+									<span style="margin-bottom: 0.5em;">
+										<iframe height=20% src="https://www.youtube.com/embed/EJmAg1Bnp-k?si=c5q8eiYyuAao3opy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</span>
+									<br>
+									<a href="https://youtu.be/EJmAg1Bnp-k?si=24dVkyAtTY2MHnLp">3D Printing Tutorial</a>
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 7%">
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 30%">
+									<span style="margin-bottom: 0.5em;">
+										<iframe src="https://www.youtube.com/embed/x3ko0v_xwpg?si=0cXzjI4zI8P9UDxd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</span>
+									<br>
+									<a href="https://youtu.be/x3ko0v_xwpg?si=cQnTKZEktMx3oPpf">Assembly Tutorial</a>
+								</div> -->
+							</div>
+						</div>
+						
+						<!-- <hr>
+						<h3>Team</h3>
+						<section>
+							<div class="box alt" style="margin-bottom: 1em;">
+								<div class="row 50% uniform" style="width: 100%">
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://cheng-chi.github.io/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/cheng_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Cheng Chi<sup>*1,2</sup></a></div>
+									
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://zhenjiaxu.com/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/zhenjia_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Zhenjia Xu<sup>*1,2</sup></a></div>
+									
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://chuerpan.com/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/chuer_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Chuer Pan<sup>1</sup></a></div>
+
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://www.eacousineau.com/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/eric_thumbnail.png" alt="" style="border-radius: 50%;" /></span>Eric Cousineau<sup>3</sup></a></div>
+									
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="http://www.benburchfiel.com/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/benjamin_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Benjamin Burchfiel<sup>3</sup></a></div>
+
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://www.cs.cmu.edu/~sfeng/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/siyuan_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Siyuan Feng<sup>3</sup></a></div>
+											
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://groups.csail.mit.edu/locomotion/russt.html"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/russ_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Russ Tedrake<sup>3</sup></a></div>
+
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%"
+									><a href="https://shurans.github.io/"><span class="image fit" style="margin-bottom: 0.5em;">
+										<img src="images/shuran_thumbnail.jpeg" alt="" style="border-radius: 50%;" /></span>Shuran Song<sup>1,2</sup></a></div>
+									
+								</div>
+							</div>
+						</section>
+						<p>
+							<sup>1</sup> Stanford University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<sup>2</sup> Columbia University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<sup>3</sup> Toyota Research Institute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<sup>*</sup> Indicates equal contribution
+						</p> -->
+				
+						<!-- <h3>BibTeX</h3>
+						<pre><code>@inproceedings{chi2024universal,
+						title={PP-Tac: Paper Picking Using Omnidirectional Tactile Feedback in Dexterous Robotic Hands},
+						author={Chi, Cheng and Xu, Zhenjia and Pan, Chuer and Cousineau, Eric and Burchfiel, Benjamin and Feng, Siyuan and Tedrake, Russ and Song, Shuran},
+						booktitle={Proceedings of Robotics: Science and Systems (RSS)},
+						year={2024}
+						}</code></pre> -->
+					
+						<hr>
+						<h3>Tactile Sensor</h3>
+						<b>At first, let me show you some results of our new designed visual-based tactile sensor!</b>
+						<div style="display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+							<div style="width: 50%;">
+							  <video width="100%" autoplay loop muted playsinline>
+								<source src="videos/tactile_depth_recon.mp4" type="video/mp4">
+							  </video>
+							</div>
+							<div style="width: 50%;">
+							  <video width="100%" autoplay loop muted playsinline>
+								<source src="videos/tactile_slip_detec.mp4" type="video/mp4">
+							  </video>
+							</div>
+						</div>
+						<b>The complete CAD design of our tactile sensor will be made publicly available soon. 
+							This will be accompanied by comprehensive fabrication documentation, including detailed assembly instructions and manufacturing specifications.</b>
+
+						<hr>
+						<h3>In-the-wild Generalization Experiments</h3>
+						<h4>(1) Randomly placed book📕 </h4>
+						<div style="display: flex; justify-content: center; align-items: center; max-width: 1200px; margin: 0px auto 0 auto;">
+						  <div style="width: 70%;">
+							<video width="100%" autoplay loop muted playsinline>
+							  <source src="videos/book.mp4" type="video/mp4">
+							</video>
+						  </div>
+						</div>
+						<h4>(2) Randomly placed keyboard⌨️ and book📕  </h4>
+						<div style="display: flex; justify-content: center; align-items: center; max-width: 1200px; margin: 0 auto;">
+							<div style="width: 70%;">
+							  <video width="100%" autoplay loop muted playsinline>
+								<source src="videos/keyboard.mp4" type="video/mp4">
+							  </video>
+							</div>
+						</div>
+						<h4>(3) Randomly placed plate🍽️ </h4>
+						<div style="display: flex; justify-content: center; align-items: center; max-width: 1200px; margin: 0 auto;">
+							<div style="width: 70%;">
+							<video width="100%" autoplay loop muted playsinline>
+								<source src="videos/plate.mp4" type="video/mp4">
+							</video>
+							</div>
+						</div>
+
+						<hr>
+						<h3>Human Interference</h3>
+						During plastic bag grasping trials, we systematically introduced controlled perturbations to evaluate the robustness of the grasping process.
+						<div style="display: flex; justify-content: center; align-items: center; max-width: 1200px; margin: 0 auto;">
+							<div style="width: 70%;">
+							<video width="100%" autoplay loop muted playsinline>
+								<source src="videos/human_interference.mp4" type="video/mp4">
+							</video>
+							</div>
+						</div>
+
+
+						<hr>
+						<h3>Other Ability</h3>
+						We posit that the proposed framework exhibits strong extensibility and can be readily adapted to various manipulation tasks beyond the current scope.
+						<h4>(1) In-hand object reorientation </h4>
+						<p style="margin-top:-1em;">By synthesising different fingertip trajectories of manipulation, our model can achieve in-hand object reorientation with only tactile and proprioceptive feedback.
+						</p>
+						<div style="display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto; gap: 20px;">
+							<div style="width: 48%; display: flex; flex-direction: column; align-items: center;">
+							  <video width="100%" autoplay loop muted playsinline>
+								<source src="videos/rotate_orange.mp4" type="video/mp4">
+							  </video>
+							  <p style="text-align: center; margin-top: 8px;">Rotate an orange in hand</p>
+							</div>
+							<div style="width: 48%; display: flex; flex-direction: column; align-items: center;">
+							  <video width="100%" autoplay loop muted playsinline>
+								<source src="videos/pinch_roll_bulb.mp4" type="video/mp4">
+							  </video>
+							  <p style="text-align: center; margin-top: 8px;">Pinch and roll a light bulb</p>
+							</div>
+						  </div>
+						<h4>(2) Continuous global exploration of object geometry </h4>
+						<p style="margin-top:-1em;"> The fundamental challenge lies in maintaining continuous finger-object contact through tactile feedback, which inherently enables global exploration and manipulation capabilities.
+						</p>
+						<div style="display: flex; justify-content: center; align-items: center; max-width: 1200px; margin: 0 auto;">
+							<div style="width: 70%;">
+							<video width="100%" autoplay loop muted playsinline>
+								<source src="videos/global_explore.mp4" type="video/mp4">
+							</video>
+							</div>
+						</div>
+
+
+						<hr>
+						<h3>Contact</h3>
+				        <p>If you have any questions, please feel free to contact <a href="http://peilin-666.github.io/">Pei Lin</a>.</p>
+						
+					</section>
+
+					
+			</div>
+
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+
+	<footer style="text-align: center;">
+		© 2025 Pei Lin. All rights reserved.<br>
+		  Template designed by <a href="https://umi-gripper.github.io" target="_blank">UMI</a>.
+	</footer>
+
+</html>
