@@ -1,1 +1,1 @@
-Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots
+Project page of "PP-Tac: Paper Picking Using Omnidirectional Tactile Feedback in Dexterous Robotic Hands"
