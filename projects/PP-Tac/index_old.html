@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PP-Tac: Paper Picking Using Omnidirectional Tactile Feedback in Dexterous Robotic Hands</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="PP-Tac: Paper Picking Using Omnidirectional Tactile Feedback in Dexterous Robotic Hands - Project Page">
+    <meta name="viewport" content="width=1000">
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-E1D3L6JXGY"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-E1D3L6JXGY');
+	</script>
+
+
+    <meta property="og:url"           content="https://peilin-666.github.io/projects/PP-Tac/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="PP-Tac: Paper Picking Using Omnidirectional Tactile Feedback in Dexterous Robotic Hands" />
+    <meta property="og:description"   content="Robots are increasingly envisioned as human companions, assisting with everyday tasks that often involve manipulating deformable objects. Recent advancements in robotic hardware and embodied AI algorithms have expanded the range of tasks robots can perform. However, current systems still struggle with handling thin, flat objects like paper and fabric due to limitations in motion planning and perception. This paper introduces PP-Tac, a robotic system designed specifically for handling paper-like objects. We developed a multi-fingered robotic hand equipped with high-resolution tactile sensors that provide omnidirectional feedback, enabling slippage detection and precise friction control with the material. Additionally, we created a grasp trajectory synthesis pipeline to generate a dataset of flat-object grasping motions and trained a diffusion policy for real-time control. This policy was then transferred to a real-world hand-arm platform for extensive evaluation. Our experiments, involving both everyday objects (e.g., plastic bags, paper, cloth) and more challenging materials (e.g., kraft paper handbags), achieved a success rate of 87.5%. By leveraging tactile feedback, our system also adapts to varying surfaces beneath the objects. These results demonstrate the robustness of our approach. We believe PP-Tac has significant potential for applications in household and industrial settings, such as organizing documents, packaging, and cleaning, where precise handling of flat objects is essential." />
+    
+    <style>
+        .sensor-banner {
+            text-align: center;
+            color: #ff0000;
+            font-style: italic;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 0;
+            background-color: #fff0f0;
+            margin: 20px 0 0 0;
+            width: 100%;
+            border-bottom: 1px solid #ffcccc;
+        }
+        .sensor-banner a {
+            color: #ff0000;
+            text-decoration: underline;
+        }
+        .sensor-banner a:hover {
+            color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Add some space before the banner -->
+    <div style="height: 30px;"></div>
+    
+    <div class="sensor-banner">
+        If you lack the facilities to produce sensors, we plan to offer ready-to-use solutions. Please fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLScPHbigxKi8E6VMdBBAf_42MCu-X_zb6fcddicOVv0eEEXQJA/viewform">this form</a> to register.
+    </div>
+    <!-- Rest of your page content goes here -->
+	<body id="top">
+		<!-- Main -->
+			<div id="main" style="padding-bottom:1em; padding-top: 5em; width: 60em; max-width: 70em; margin-left: auto; margin-right: auto;">
+					<section id="four">
+						<div class="box alt" style="margin-bottom: 1em;">
+							<div class="row 0% uniform" style="width: 100%; display: flex; justify-content: space-between;">
+								<!-- tong Logo -->
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 20%">
+									<span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="images/tong.png" alt="">
+									</span>
+								</div>
+								<!-- shanghaitech Logo -->
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 22%">
+									<span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="images/shanghaitech.svg" alt="">
+									</span>
+								</div>
+								<!-- beihang Logo -->
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 22%">
+									<span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="images/beihang.png" alt="">
+									</span>
+								</div>
+
+							</div>
+						</div>
+
+						<h1 style="text-align: center; margin-bottom: 0; color: #8C1515; font-size: 300%">PP-Tac: Paper Picking Using </h1>
+						<h2 style="text-align: center; white-space: nowrap; font-size: 200%"> Omnidirectional Tactile Feedback in Dexterous Robotic Hands</h2>
+						<h2 style="text-align: center; white-space: nowrap; font-size: 120%; color: black;"> Robotics: Science and Systems(RSS) 2025</h2>
+						<h3 style="text-align: center; white-space: nowrap; font-size: 120%; color: black;"><a href="http://peilin-666.github.io/">Pei Lin</a><sup>*</sup>, Yuzhe Huang<sup>*</sup>, <a href="https://mrliwanlin.github.io/">Wanlin Li</a><sup>*</sup>, Jianpeng Ma, <a href="https://scholar.google.com/citations?hl=zh-CN&user=Qhiy3doAAAAJ">Chenxi Xiao</a><sup>†</sup>, <a href="https://scholar.google.com/citations?user=YfWhJZoAAAAJ&hl=zh-CN&oi=ao">Ziyuan Jiao</a><sup>†</sup> </h3>
+						<h3 style="text-align: center; white-space: nowrap; font-size: 100%; color: black;">* Denotes equal contribution; † Co-corresponding authors</h3>
+						
+						<div class="video-container" style="max-width: 800px; margin: 0 auto;">
+							<video autoplay loop muted playsinline style="width: 100%; display: block;">
+								<source src="videos/Results_Gallery.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							<p style="text-align: center; margin-top: 0.5em;">Picking various paper-like objects from various terrains.</p>
+							</p>
+						</div>
+
+
+						<p style="color: black;">Robots are increasingly envisioned as human companions, assisting with everyday tasks that often involve manipulating deformable objects. Recent advancements in robotic hardware and embodied AI algorithms have expanded the range of tasks robots can perform. However, current systems still struggle with handling thin, flat objects like paper and fabric due to limitations in motion planning and perception. This paper introduces PP-Tac, a robotic system designed specifically for handling paper-like objects. We developed a multi-fingered robotic hand equipped with high-resolution tactile sensors that provide omnidirectional feedback, enabling slippage detection and precise friction control with the material. Additionally, we created a grasp trajectory synthesis pipeline to generate a dataset of flat-object grasping motions and trained a diffusion policy for real-time control. This policy was then transferred to a real-world hand-arm platform for extensive evaluation. Our experiments, involving both everyday objects (e.g., plastic bags, paper, cloth) and more challenging materials (e.g., kraft paper handbags), achieved a success rate of 87.5%. By leveraging tactile feedback, our system also adapts to varying surfaces beneath the objects. These results demonstrate the robustness of our approach. We believe PP-Tac has significant potential for applications in household and industrial settings, such as organizing documents, packaging, and cleaning, where precise handling of flat objects is essential.
+						</p>
+		
+						<hr>
+						<h3>Paper</h3>
+						<p style="margin-bottom: 0em;">
+							Latest version: <a href="https://arxiv.org/abs/2504.16649">arXiv</a> or <a href="PP_Tac.pdf">here</a> or <a href="https://roboticsconference.org/program/papers/56/"> RSS 2025</a> .
+							<!-- Paper is coming soon!!! -->
+						</p>
+						<div class="12u$"><a href="PP_Tac.pdf"><span class="image fit" style="border: 1px solid; border-color: #888888;"><img src="images/PP_tac_thumbnail.png" alt="" /></span></a></div>
+
+						
+						<h3>Code and Hardware</h3>
+
+						<div class="box alt" style="margin-bottom: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 10%">
+									<a href="https://github.com/bigai-ai/PP-Tac/tree/main">
+										<span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/github_logo.svg" alt=""/>
+										</span>
+									</a>
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 10%">
+									<a href="https://github.com/bigai-ai/PP-Tac/tree/main">
+										<span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/build.svg" alt=""/>
+										</span>
+									</a>
+								</div>
+
+								<div class="video-container" style="width: 85%; margin: 0 auto; text-align: center;">
+								<!-- 视频容器（比例盒子）使用16:9比例，宽度100%自适应 -->
+								<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 0.5em;">
+									<iframe 
+									src="https://youtu.be/-npk0cRKWGI?si=1LqsBZaPC2U_BC4Y"
+									title="YouTube video player" 
+									frameborder="0" 
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+									referrerpolicy="strict-origin-when-cross-origin" 
+									allowfullscreen
+									style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+									</iframe>
+								</div>
+								
+								<!-- 链接居中显示 -->
+								<a href="https://youtu.be/-npk0cRKWGI?si=1LqsBZaPC2U_BC4Y" 
+									style="display: block; text-align: center; font-size: 1.2em; padding: 0.5em 0;">
+									Assembly Tutorial
+								</a>
+								</div>
+
+								<!-- <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 30%">
+									<span style="margin-bottom: 0.5em;">
+										<iframe src="https://www.youtube.com/embed/x3ko0v_xwpg?si=0cXzjI4zI8P9UDxd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</span>
+									<br>
+									<a href="https://youtu.be/x3ko0v_xwpg?si=cQnTKZEktMx3oPpf">Assembly Tutorial</a>
+								</div> -->
+							</div>
+						</div>
+						
+						<!-- <hr>
+						<h3>Team</h3>
+						<section>
+							<div class="box alt" style="margin-bottom: 1em;">
+								<div class="row 50% uniform" style="width: 100%">
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://cheng-chi.github.io/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/cheng_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Cheng Chi<sup>*1,2</sup></a></div>
+									
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://zhenjiaxu.com/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/zhenjia_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Zhenjia Xu<sup>*1,2</sup></a></div>
+									
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://chuerpan.com/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/chuer_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Chuer Pan<sup>1</sup></a></div>
+
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://www.eacousineau.com/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/eric_thumbnail.png" alt="" style="border-radius: 50%;" /></span>Eric Cousineau<sup>3</sup></a></div>
+									
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="http://www.benburchfiel.com/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/benjamin_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Benjamin Burchfiel<sup>3</sup></a></div>
+
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://www.cs.cmu.edu/~sfeng/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/siyuan_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Siyuan Feng<sup>3</sup></a></div>
+											
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://groups.csail.mit.edu/locomotion/russt.html"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/russ_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Russ Tedrake<sup>3</sup></a></div>
+
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%"
+									><a href="https://shurans.github.io/"><span class="image fit" style="margin-bottom: 0.5em;">
+										<img src="images/shuran_thumbnail.jpeg" alt="" style="border-radius: 50%;" /></span>Shuran Song<sup>1,2</sup></a></div>
+									
+								</div>
+							</div>
+						</section>
+						<p>
+							<sup>1</sup> Stanford University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<sup>2</sup> Columbia University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<sup>3</sup> Toyota Research Institute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<sup>*</sup> Indicates equal contribution
+						</p> -->
+				
+						<!-- <h3>BibTeX</h3>
+						<pre><code>@inproceedings{chi2024universal,
+						title={PP-Tac: Paper Picking Using Omnidirectional Tactile Feedback in Dexterous Robotic Hands},
+						author={Chi, Cheng and Xu, Zhenjia and Pan, Chuer and Cousineau, Eric and Burchfiel, Benjamin and Feng, Siyuan and Tedrake, Russ and Song, Shuran},
+						booktitle={Proceedings of Robotics: Science and Systems (RSS)},
+						year={2024}
+						}</code></pre> -->
+					
+						<hr>
+						<h3>Tactile Sensor</h3>
+						<b>At first, let me show you some results of our new designed visual-based tactile sensor!</b>
+						<div style="display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+							<div style="width: 50%;">
+							  <video width="100%" autoplay loop muted playsinline>
+								<source src="videos/tactile_depth_recon.mp4" type="video/mp4">
+							  </video>
+							</div>
+							<div style="width: 50%;">
+							  <video width="100%" autoplay loop muted playsinline>
+								<source src="videos/tactile_slip_detec.mp4" type="video/mp4">
+							  </video>
+							</div>
+						</div>
+						<b>The complete CAD design of our tactile sensor will be made publicly available soon. 
+							This will be accompanied by comprehensive fabrication documentation, including detailed assembly instructions and manufacturing specifications.</b>
+
+						<hr>
+						<h3>In-the-wild Generalization Experiments</h3>
+						<h4>(1) Randomly placed book📕 </h4>
+						<div style="display: flex; justify-content: center; align-items: center; max-width: 1200px; margin: 0px auto 0 auto;">
+						  <div style="width: 70%;">
+							<video width="100%" autoplay loop muted playsinline>
+							  <source src="videos/book.mp4" type="video/mp4">
+							</video>
+						  </div>
+						</div>
+						<h4>(2) Randomly placed keyboard⌨️ and book📕  </h4>
+						<div style="display: flex; justify-content: center; align-items: center; max-width: 1200px; margin: 0 auto;">
+							<div style="width: 70%;">
+							  <video width="100%" autoplay loop muted playsinline>
+								<source src="videos/keyboard.mp4" type="video/mp4">
+							  </video>
+							</div>
+						</div>
+						<h4>(3) Randomly placed plate🍽️ </h4>
+						<div style="display: flex; justify-content: center; align-items: center; max-width: 1200px; margin: 0 auto;">
+							<div style="width: 70%;">
+							<video width="100%" autoplay loop muted playsinline>
+								<source src="videos/plate.mp4" type="video/mp4">
+							</video>
+							</div>
+						</div>
+
+						<hr>
+						<h3>Human Interference</h3>
+						During plastic bag grasping trials, we systematically introduced controlled perturbations to evaluate the robustness of the grasping process.
+						<div style="display: flex; justify-content: center; align-items: center; max-width: 1200px; margin: 0 auto;">
+							<div style="width: 70%;">
+							<video width="100%" autoplay loop muted playsinline>
+								<source src="videos/human_interference.mp4" type="video/mp4">
+							</video>
+							</div>
+						</div>
+						<hr>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{PP_Tac_RSS2025,
+  title     = {PP-Tac: Paper Picking Using Omnidirectional Tactile Feedback in Dexterous Robotic Hands},
+  author    = {Lin, Pei and Huang, Yuzhe and Li, Wanlin and Ma, Jianpeng and Xiao, Chenxi and Jiao, Ziyuan},
+  booktitle = {Robotics: Science and Systems (RSS)},
+  year      = {2025},
+  url       = {https://roboticsconference.org/program/papers/56/}
+}</code></pre>
+  </div>
+</section>
+						<hr>
+						<h3>Contact</h3>
+				        <p>If you have any questions, please feel free to contact <a href="http://peilin-666.github.io/">Pei Lin</a>.</p>
+						
+					</section>
+
+					
+			</div>
+
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+	
+
+	<footer style="text-align: center;">
+		© 2025 Pei Lin. All rights reserved.<br>
+		  Template designed by <a href="https://umi-gripper.github.io" target="_blank">UMI</a>.
+	</footer>
+
+</html>
