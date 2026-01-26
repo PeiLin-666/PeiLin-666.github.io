@@ -8,13 +8,19 @@
 <url>
  <loc>https://peilin-666.github.io/</loc>
  <priority>1.0</priority>
- <lastmod>2025-03-31</lastmod>
+ <lastmod>2026-01-26</lastmod>
  <changefreq>weekly</changefreq>
 </url>
 <url>
  <loc>https://peilin-666.github.io/projects/PP-Tac/</loc>
  <priority>1.0</priority>
- <lastmod>2025-03-31</lastmod>
+ <lastmod>2026-01-26</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+</urlset>
+ <loc>https://peilin-666.github.io/projects/DexMove/</loc>
+ <priority>1.0</priority>
+ <lastmod>2026-01-26</lastmod>
  <changefreq>weekly</changefreq>
 </url>
 </urlset>
