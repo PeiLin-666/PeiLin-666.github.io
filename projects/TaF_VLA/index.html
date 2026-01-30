@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="TaF-VLA: Tactile-Force Alignment in Vision-Language-Action Models for Force-aware Manipulation">
+  <meta name="keywords"
+        content="Vision-Language-Action, Tactile sensing, Force-aware manipulation, Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TaF-VLA: Tactile-Force Alignment for Force-aware Manipulation</title>
+
+  <!-- Google Analytics (optional, remove if not needed) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <h1 class="title is-1 publication-title">
+            TaF-VLA
+          </h1>
+          <h2 class="subtitle is-3">
+            Tactile-Force Alignment in Vision-Language-Action Models<br>
+            for Force-aware Manipulation
+          </h2>
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Authors</span>
+          </div> -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <p class="is-size-5">
+                Yuzhe Huang<sup>1,3*</sup>,
+                Pei Lin<sup>2,3*</sup>,
+                Wanlin Li<sup>3*</sup>,
+                Daohan Li<sup>3</sup>,
+                Jiajun Li<sup>3,4</sup>,
+                Jiaming Jiang<sup>2,3</sup>,
+                Chenxi Xiao<sup>2†</sup>,
+                Ziyuan Jiao<sup>3†</sup>
+              </p>
+            </div>
+          </div>
+          <div class="columns is-centered has-text-centered" style="margin-top: 0.5rem;">
+          <div class="column is-four-fifths">
+            <p class="is-size-6">
+              <sup>*</sup> These authors contributed equally
+              <sup>†</sup> corresponding author
+            </p>
+            <p class="is-size-6">
+              
+              <sup>1</sup> Beihang University &nbsp;&nbsp;
+              <sup>2</sup> ShanghaiTech University &nbsp;&nbsp;
+              <sup>3</sup> BIGAI &nbsp;&nbsp;
+              <sup>4</sup> The University of Hong Kong
+            </p>
+          </div>
+        </div>
+
+          <div class="publication-links">
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/2601.20321" class="external-link button is-dark is-rounded">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv</span>
+              </a>
+            </span>
+            <span class="link-block">
+                <a href="https://github.com/mrHuangyz/TaF-VLA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code(Coming soon)</span>
+                  </a>
+            </span>
+            <span class="link-block">
+              <a href="https://youtu.be/vLBik9eI4SQ" class="external-link button is-dark is-rounded">
+                <span class="icon"><i class="fab fa-youtube"></i></span>
+                <span>Video</span>
+              </a>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEASER ================= -->
+<section class="hero teaser">
+<div class="container is-max-desktop">
+<div class="hero-body has-text-centered">
+
+
+<!-- Teaser Image -->
+<figure class="image is-inline-block" style="max-width: 900px; margin-bottom: 2rem;">
+<img src="./static/images/teaser.png"
+class="interpolation-image"
+alt="TaF-VLA pipeline overview.">
+</figure>
+
+
+<!-- Text Content -->
+<div class="content has-text-justified" style="max-width: 1000px; margin: 0 auto;">
+<h2 class="subtitle has-text-centered">
+<strong>From Data to Policy: The TaF-VLA Pipeline</strong>
+</h2>
+
+
+<p class="has-text-justified">
+To address the ``force-blindness'' of current VLA models,
+we propose a paradigm shift from tactile-vision to tactile-force alignment,
+realized through three stages:
+</p>
+
+
+<p class="has-text-justified">
+(a) We deploy an automated data acquisition system (TaF-Device) to construct
+the TaF-Dataset, a large-scale collection of synchronized visuotactile images,
+6-axis force/torque, and matrix force maps.
+Using this data, we pretrain the TaF-Adapter to align tactile observations
+with ground-truth force signals in a shared latent space.
+</p>
+
+
+<p class="has-text-justified">
+(b) We fuse the TaF-Adapter into a VLA backbone and fine-tune the policy on
+real-world demonstrations enriched with force-aware language instructions
+(<em>i.e.</em>, force-aware manipulation dataset).
+</p>
+
+
+<p class="has-text-justified">
+(c) This explicit tactile-force alignment empowers TaF-VLA to master complex
+force-aware manipulation tasks, such as tool-use and deformable object
+manipulation, where traditional vision-based baselines consistently fail.
+</p>
+</div>
+
+
+</div>
+</div>
+</section>
+
+<!-- ================= RESULTS CAROUSEL ================= -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/cut_jelly_baseline.mov" type="video/mp4">
+          </video>
+          <p class="has-text-centered">cut_jelly_baseline</p>
+        </div>
+
+        <div class="item">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/weight_baseline.mov" type="video/mp4">
+          </video>
+          <p class="has-text-centered">weight_baseline</p>
+        </div>
+
+        <div class="item">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/ablation.mov" type="video/mp4">
+          </video>
+          <p class="has-text-centered">ablation</p>
+        </div>
+
+        <div class="item">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/plug_ablity.mov" type="video/mp4">
+          </video>
+          <p class="has-text-centered">plug_ablity</p>
+        </div>
+
+        <div class="item">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/tube_baseline.mov" type="video/mp4">
+          </video>
+          <p class="has-text-centered">tube_baseline</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABSTRACT ================= -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Vision-Language-Action (VLA) models have recently emerged as powerful generalists for robotic manipulation. 
+            However, due to their predominant reliance on visual modalities, they fundamentally lack the physical intuition
+            required for contact-rich tasks that require precise force regulation and physical reasoning. 
+            Existing attempts to incorporate vision-based tactile sensing into VLA models typically treat tactile inputs 
+            as auxiliary visual textures, thereby overlooking the underlying correlation between surface deformation and 
+            interaction dynamics.
+          </p>
+          <p>
+            To bridge this gap, we propose a paradigm shift from tactile-vision alignment to tactile-force alignment. 
+            Here, we introduce <strong>TaF-VLA</strong>, a framework that explicitly grounds high-dimensional tactile observations in 
+            physical interaction forces.
+          </p>
+          <p>
+            To facilitate this, we develop an automated tactile-force data acquisition device and curate the TaF-Dataset, 
+            comprising over 10 million synchronized tactile observations, 6-axis force/torque, and matrix force map. 
+            To align sequential tactile observations with interaction forces, the central component of our approach is 
+            the Tactile-Force Adapter (TaF-Adapter), a tactile sensor encoder that extracts discretized latent information 
+            for encoding tactile observations. This mechanism ensures that the learned representations capture history-dependent, 
+            noise-insensitive physical dynamics rather than static visual textures. Finally, we integrate this force-aligned 
+            encoder into a VLA backbone. Extensive real-world experiments demonstrate that TaF-VLA policy significantly 
+            outperforms state-of-the-art tactile-vision-aligned and vision-only baselines on contact-rich tasks, verifying 
+            its ability to achieve robust, force-aware manipulation through cross-modal physical reasoning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Section Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">
+          TaF-Device: Tactile-align-Force Data Acquisition System
+        </h2>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            TaF-Device is an automated data acquisition system designed to
+            efficiently collect aligned visuotactile observations and
+            physical interaction forces.
+          </p>
+          <p>
+            By tightly synchronizing visual inputs, tactile signals,
+            and 6-axis force/torque measurements, TaF-Device enables
+            scalable construction of force-aware manipulation datasets
+            with precise temporal alignment.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Images: side by side -->
+    <div class="columns is-centered" style="margin-top: 2rem;">
+      <div class="column is-four-fifths">
+        <div class="columns">
+
+          <div class="column is-6">
+            <figure class="image">
+              <img src="./static/images/hardware.png"
+                   alt="Overview of the TaF-Device.">
+              <figcaption class="has-text-centered is-size-7">
+                TaF-Device Overview
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="column is-6">
+            <figure class="image">
+              <img src="./static/images/assembly.png"
+                   alt="Modeling and kinematic design of the TaF-Device.">
+              <figcaption class="has-text-centered is-size-7">
+                TaF-Device Modeling
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Device Video -->
+    <div class="columns is-centered has-text-centered" style="margin-top: 2.5rem;">
+      <div class="column is-four-fifths">
+        <video autoplay controls playsinline width="100%">
+          <source src="./static/videos/device.mov" type="video/mp4">
+        </video>
+        <p class="is-size-7 has-text-grey">
+          Real-world demonstration of the TaF-Device during data acquisition(Only show how device work).
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section is-light">
+  <div class="container is-max-desktop">
+
+    <!-- Section Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Force-aware Manipulation Dataset</h2>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            We utilize a high-fidelity master-puppet teleoperation system to collect over 
+            10K real-world manipulation episodes across 20+ diverse tasks, ranging from fragile object 
+            handling to tool use. 
+            This process empowers force-aware directives, providing the hierarchical supervision necessary for force-aware 
+            downstream policy learning
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dataset Video -->
+    <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
+      <div class="column is-four-fifths">
+        <video autoplay controls playsinline width="100%">
+          <source src="./static/videos/dataset.mov" type="video/mp4">
+        </video>
+        <p class="is-size-7 has-text-grey">
+          Representative examples from the force-aware manipulation dataset.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= demoshow ================= -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Jelly Slicing</h2>
+          <p>
+          TaF-VLA can cut off the jelly on balloon without damaging it
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/cut_jelly_ours.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">Tweezer Weight Pick</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+            TaF-VLA can use tweezers to continuously extract weights.
+            </p>
+            <video id="matting-video" autoplay controls playsinline height="100%">
+              <source src="./static/videos/weight_ours.mov"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+
+
+
+  </div>
+</section>
+
+<!-- ================= BIBTEX ================= -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{taf_vla,
+  title   = {TaF-VLA: Tactile-Force Alignment in Vision-Language-Action Models for Force-aware Manipulation},
+  author  = {Yuzhe Huang,Pei Lin,Wanlin Li,Daohan Li,Jiajun Li,Jiaming Jiang,Chenxi Xiao,Ziyuan Jiao},
+  journal = {Arxiv},
+  year    = {2026}
+}</code></pre>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        This website is adapted from the Nerfies template.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
