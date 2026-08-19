@@ -41,8 +41,8 @@
                     I'm fortunate to be advised by Prof. <a href="https://sites.google.com/g.ucla.edu/zyjiao/home">Ziyuan Jiao</a> and Prof. <a href="https://rim-laboratory.github.io/">Chenxi Xiao</a>.
                 </p>
                 <p>
-                    My current research centers on dexterous robotic hands equipped with tactile perception. 
-                    I aim to enable these dexterous robotic hands to perform more complex and higher-level maneuvers by endowing them with tactile capabilities.
+                    My current research centers on VLA and dexterous robotic hands equipped with tactile perception. 
+                    I aim to enable robots to perform more complex and higher-level maneuvers.
                 </p>
                 <p>
                     In my previous research, I have primarily focused on human body motion,
@@ -67,6 +67,8 @@
         <div class="section" id="updates">
             <h1>Updates</h1>
             <ul>
+                <li> <b>Jun 2026</b> <a href="https://qwen.ai/blog?id=qwen-robotmanip"><strong>Qwen-RobotManip</strong></a> , <a href="https://qwen.ai/blog?id=qwen-robotnav"><strong>Qwen-RobotNav</strong></a>, <a href="https://qwen.ai/blog?id=qwen-robotworld"><strong>Qwen-RobotWorld</strong></a>  is released! We achieve SOTA in many benchmarks!
+                <li> <b>May 2026</b> <a href="https://qwen.ai/blog?id=qwenvla"><strong>Qwen-VLA</strong></a> is released!
                 <li> <b>Jan 2026</b> <a href="https://peilin-666.github.io/projects/DexMove/"><strong>DexMove</strong></a> is accdepted by ICLR 2026! See you in Rio de Janeiro!
                 <li> <b>June 2025</b> <a href="https://ieeexplore.ieee.org/document/11246144"><strong>R-Tac0</strong></a> is accdepted by IROS 2025! See you in Hangzhou!
                 <li> <b>April 2025</b> <a href="https://peilin-666.github.io/projects/PP-Tac/"><strong>PP-Tac</strong></a> is accdepted by RSS 2025! The harware has been released! See you in LA!
@@ -79,7 +81,129 @@
         </div>
         <div class="divider"></div>
         <div style="display:flex;flex-direction: column;" id="research">
+            <h1>Technical Reports</h1>
+        <div>
+              <a href="https://qwen.ai/blog?id=qwen-robotmanip" style="height: 14em;" class="research-thumb">
+                  <img width="320" src="assets/images/qwenrobotmanip.png" alt="">
+              </a>
+              <a href="https://qwen.ai/blog?id=qwen-robotmanip" class="research-proj-title">
+                Qwen-RobotManip Technical Report: Alignment Unlocks Scale for Robotic Manipulation Foundation Models
+              </a>
+              <p>
+                  
+                  <b>Qwen Team (<strong> co-first author & core contributor</strong>)</b>
+
+                  <br>
+                  <a href="https://qwen.ai/blog?id=qwen-robotmanip">Website</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  <a href="https://arxiv.org/abs/2606.17846">Arxiv</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  <a href="https://qwen.ai/blog?id=qwen-robotsuite">Blog</a>
+                  <br>
+                  <br>
+                  <b>Alignment unlocks scale, and scale unlocks generalization.</b> Qwen-RobotManip aligns heterogeneous robot embodiments into a unified Vision-Language-Action framework for scalable multi-source robot learning. It substantially outperforms prior models across all evaluated OOD settings and ranks 1st on the RoboChallenge Table30 v1 Generalist Track, demonstrating strong generalization across unseen tasks, scenes, and robot platforms.
+              </p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <div>
+              <a href="https://qwen.ai/blog?id=qwen-robotnav" style="height: 14em;" class="research-thumb">
+                  <img width="320" src="assets/images/qwenrobotnav.png" alt="">
+              </a>
+              <a href="https://qwen.ai/blog?id=qwen-robotnav" class="research-proj-title">
+                Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System
+              </a>
+              <p>
+                  
+                  <b>Qwen Team</b>
+
+                  <br>
+                  <a href="https://qwen.ai/blog?id=qwen-robotnav">Website</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  <a href="https://arxiv.org/abs/2606.18112">Arxiv</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  <a href="https://qwen.ai/blog?id=qwen-robotsuite">Blog</a>
+                  <br>
+                  Qwen-RobotNav is a scalable navigation foundation model built for agentic navigation systems, with a parameterized interface that dynamically controls task modes and observation strategies. Trained on 15.6M samples, it achieves new state-of-the-art results across major navigation benchmarks and demonstrates strong zero-shot generalization in diverse environments.
+              </p>
+            </div>
+
+            <div>
+              <a href="https://qwen.ai/blog?id=qwen-robotworld" style="height: 14em;" class="research-thumb">
+                  <img width="320" src="assets/images/qwenrobotworld.png" alt="">
+              </a>
+              <a href="https://qwen.ai/blog?id=qwen-robotworld" class="research-proj-title">
+                Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation
+              </a>
+              <p>
+                  
+                  <b>Qwen Team</b>
+
+                  <br>
+                  <a href="https://qwen.ai/blog?id=qwen-robotworld">Website</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  <a href="https://arxiv.org/abs/2606.17030">Arxiv</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  <a href="https://qwen.ai/blog?id=qwen-robotsuite">Blog</a>
+                  <br>
+                  Qwen-RobotWorld is a language-conditioned video world model that predicts physically grounded future visual trajectories across robotic manipulation, autonomous driving, indoor navigation, and human-to-robot transfer. Built on a Double-Stream MMDiT and large-scale Embodied World Knowledge, it ranks 1st overall on EWMBench and DreamGen Bench, while demonstrating robust zero-shot generalization and multi-view consistency.
+              </p>
+            </div>
+
+            <div>
+              <a href="https://qwen.ai/blog?id=qwenvla" style="height: 14em;" class="research-thumb">
+                  <img width="320" src="assets/images/qwenvla.png" alt="">
+              </a>
+              <a href="https://qwen.ai/blog?id=qwenvla" class="research-proj-title">
+                Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments
+              </a>
+              <p>
+                  
+                  <b>Qwen Team (<strong>core contributor</strong>)</b>
+
+                  <br>
+                  <a href="https://qwen.ai/blog?id=qwenvla">Website</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  <a href="https://arxiv.org/abs/2605.30280">Arxiv</a>
+                  <br>
+                  A unified embodied foundation model extending Qwen’s VL stack to action and trajectory generation via a DiT-based decoder, unifying manipulation, navigation, and trajectory prediction.
+              </p>
+            </div>
+
+
+
+
+        <div class="divider"></div>
+        <div style="display:flex;flex-direction: column;" id="research">
             <h1>Research</h1>
+
+            <div>
+              <a href="https://www-ye.github.io/ego2robot_blog/" style="height: 14em;" class="research-thumb">
+                  <img width="320" src="assets/images/ego2robot.png" alt="">
+              </a>
+              <a href="https://www-ye.github.io/ego2robot_blog/" class="research-proj-title">
+                Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data
+              </a>
+              <p>
+                  <a style="color:#000;">Ye Wang</a>*,
+                  <b>Pei Lin</b>*,
+                  <a style="color:#000;">Xionghui Chen</a>*,
+                  <a style="color:#000;">Haoqi Yuan</a>,
+                  <a style="color:#000;">Zhixuan Liang</a>,
+                  <a style="color:#000;">Yiyang Huang</a>,
+                  <a style="color:#000;">Anzhe Chen</a>,
+                  <a style="color:#000;">Zixing Lei</a>,
+                  <a style="color:#000;">Jie Zhang</a>,
+                  <a style="color:#000;">Tong Zhang</a>,
+                  <a style="color:#000;">Haoyang Li</a>,
+                  <a style="color:#000;">Chenxi Xiao</a>,
+                  <a style="color:#000;">Ziyuan Jiao</a>,
+                  <a style="color:#000;">Qin Jin</a>†
+
+                  <br>
+                  <a href="https://www-ye.github.io/ego2robot_blog/">Website</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  <a href="https://arxiv.org/abs/2608.02580">Arxiv</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  <a href="https://www-ye.github.io/ego2robot_blog/">Code(coming)</a>
+              </p>
+            </div>
+
 
             <div>
               <a href="https://peilin-666.github.io/projects/TaF_VLA/" style="height: 14em;" class="research-thumb">
